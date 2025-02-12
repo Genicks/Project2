@@ -1,0 +1,57 @@
+.sideBar {
+    position: fixed;
+    top: 0;
+    left: 0; 
+    width: 20%;
+    height: 100vh;
+    background-color: #202020;
+    padding: 1.5% 1%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.login-button, .add-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.add-button {
+    font-size: 0.7em;
+    margin: 0.5em;
+    width: 97%;
+}
+
+.icon {
+    padding: none;
+    margin-right: 5px;
+    border: none;
+    width: 14px;
+    height: 14px;
+}
+
+
+.setting-btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    margin-left: 2%;
+    margin-bottom: 0.5%;
+    font-size: 10px;
+    opacity: 0.3;
+    transition: all 0.5s ease-in-out;
+    padding: 6px 20px;
+}
+
+.setting-btn:hover {
+    opacity: 1;
+}
+
+.set {
+    width: 10px;
+    height: 10px;
+}
+
+
