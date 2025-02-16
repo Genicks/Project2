@@ -18,6 +18,12 @@ const Level = (props) => {
     ]);
   }, []);
 
+  const deleteClass = (classToRemove) => {
+    setGradeClasses((prevItems) =>
+      prevItems.filter((Class) => Class !== classToRemove)
+    );
+  };
+
   useEffect(() => {
     if (allClasses.length > 0) {
       const selectedClass = allClasses.find(
@@ -54,7 +60,12 @@ const Level = (props) => {
                 <h6>
                   {Class}{" "}
                   <MdDelete
-                    onClick={() => {console.log(`You deleted the ${Class} Class`)}}
+                    onClick={() => {
+                      if (window.confirm(`Delete ${Class} class?`)) {
+                        deleteClass(Class);
+                        console.log(`You deleted the ${Class} class`);
+                      }
+                    }}
                   />
                 </h6>
               </div>

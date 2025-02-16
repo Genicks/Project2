@@ -1,10 +1,13 @@
 .sideBar {
     position: fixed;
+    min-width: 200px;
+    max-width: 200px;
     top: 0;
     left: 0; 
     width: 20%;
     height: 100vh;
     background-color: #202020;
+    color: white;
     padding: 1.5% 1%;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -14,7 +17,16 @@
     width: 100%;
     display: flex;
     align-items: center;
-    margin: 0;
+    font-size: 0.7em;
+    margin: 0.5em;
+    width: 97%;
+
+}
+
+.login-button {
+    width: 40%;
+    margin: 0.5em;
+    min-width: 5.5rem;
 }
 
 .add-button {
@@ -37,7 +49,7 @@
     align-items: center;
     position: fixed;
     bottom: 0;
-    margin-left: 2%;
+    margin-left: 0.5rem;
     margin-bottom: 0.5%;
     font-size: 10px;
     opacity: 0.3;
@@ -54,4 +66,14 @@
     height: 10px;
 }
 
+.Settings {
+    display: none;
+}
 
+.Settings-Component {
+    display: none;
+}
+
+.active {
+    display: block;
+}
