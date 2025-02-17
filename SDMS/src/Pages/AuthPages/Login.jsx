@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./authPgs.css"; 
+import "./authPgs.css";
 
-const Login = () => {
+const Login = ({ setAuth }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -10,16 +10,19 @@ const Login = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     if (email === "nick@gmail.com" && password === "nick") {
-      navigate("/dashboard"); 
+      setAuth(true);
+      navigate("/");
     } else {
+      setEmail("");
+      setPassword("");
       alert("Invalid Credentials");
     }
   };
 
   const handleRedirect = (e) => {
     e.preventDefault();
-    navigate("/Register")
-  }
+    navigate("/Register");
+  };
 
   return (
     <div className="login-container">

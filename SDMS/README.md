@@ -1,8 +1,33 @@
-# React + Vite
+# login System
+## Main requirments
+1. The syestem should have role based login with protected routes for each role 
+    Roles:
+    - Teacher: Only access the grade level that they teach and subject they teach
+    - Student: Only access a page that summarizes there scores they have so far
+    - Admin: Have access to all scores and classes. Accessed page through manual url
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Registration 
+### Teacher
+- Full Name
+- Levels Thought
+- Email
+- Set Password
+- Role
+- School
+### Student
+- Full Name
+- Grade
+- Email
+- Set Password
+- School
+### Admin 
+- Username
+- Password
 
-Currently, two official plugins are available:
+## Login
+### All Users
+- Email
+- Password
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Steps
+1. Create secure route and understant the functionality through static variable

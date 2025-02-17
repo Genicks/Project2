@@ -8,7 +8,7 @@ import Settings from "../Settings/Settings";
 import { useEffect, useState } from "react";
 import Addclass from "../../Pages/AddClass/Addclass";
 
-const Container = (props) => {
+const Container = ({ setAuth }) => {
   const [active1, setActive1] = useState(false);
   const [active2, setActive2] = useState(false);
   const navigate = useNavigate();
@@ -20,7 +20,8 @@ const Container = (props) => {
           className="login-button"
           onClick={(e) => {
             e.preventDefault;
-            navigate("/Login");
+            // navigate("/Login");
+            setAuth(false);
           }}
         >
           <IoPersonCircle className="icon" />
@@ -50,7 +51,7 @@ const Container = (props) => {
           className="add-button"
           onClick={() => {
             console.log("You clicked on the Add-Class Button");
-            setActive2(!active2)
+            setActive2(!active2);
           }}
         >
           <IoMdAddCircle className="icon" />
