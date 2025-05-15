@@ -1,6 +1,4 @@
-const mysql = require('mysql2');
-require('dotenv').config();
-
+const mysql = require("mysql2");
 
 const pool = mysql.createPool({
   host: process.env.HOST,
@@ -9,7 +7,15 @@ const pool = mysql.createPool({
   database: process.env.DB,
   waitForConnections: true,
   connectionLimit: 10,
-  queueLimit: 0
+  queueLimit: 0,
 });
 
-module.exports = { pool };
+const findUser = async (username) => {
+  const [rows] = await pool.promise().query(
+    "SELECT Password FROM Users WHERE BINARY username = ?",
+    [username]
+  );
+  return rows;
+};
+
+module.exports = { pool, findUser };
