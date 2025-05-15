@@ -9,7 +9,7 @@ const Login = ({ setAuth }) => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if (email === "nick@gmail.com" && password === "nick") {
+    if (email === "admin" && password === "admin") {
       setAuth(true);
       navigate("/");
     } else {
@@ -29,8 +29,8 @@ const Login = ({ setAuth }) => {
       <form className="form" onSubmit={handleLogin}>
         <h2>Login</h2>
         <input
-          type="email"
-          placeholder="Email"
+          type="username"
+          placeholder="Username"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
